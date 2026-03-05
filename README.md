@@ -1,37 +1,26 @@
 # COREC Pipeline POS–NER y alineamiento O(1) a CoNLL-U Plus
 
-Pipeline de procesamiento lingüístico desarrollado para el proyecto COREC.
+## Descripción
+Este proyecto, desarrollado en el contexto del **Corpus Oral de Referencia del Español en Contacto (COREC) Fase II: lenguas minoritarias**, tiene por objetivo la implementación de un **algoritmo de alineamiento determinista** entre las formas originales presentes en las transcripciones ortográficas del corpus y los tokens generados por el etiquetado automático mediante la librería de PLN Stanza.
 
-## Funcionalidades
+El sistema se basa en una **clave triple estable** (`id_archivo`, `id_ud`, `id_conllu`), que permite recuperar en **tiempo constante (O(1))** los tokens correspondientes, así como mantener la **trazabilidad entre las distintas representaciones del texto**.
 
-- Etiquetado automático POS y NER
-- Conversión a formato CoNLL-U
-- Extensión a CoNLL-U Plus
-- Alineamiento determinista entre tokens y formas originales
-- Sistema de clave triple estable (id_archivo, id_ud, id_conllu)
-- Índices en memoria con acceso O(1)
+Asimismo, el flujo de trabajo incluye **etiquetado morfosintáctico (POS) en el marco de Universal Dependencies (UD)**, **reconocimiento de entidades nombradas (NER)** y **generación de salidas estructuradas en formato CoNLL-U y CoNLL-U Plus**.
 
-## Salidas
+La extensión del formato **CoNLL-U a CoNLL-U Plus** permite enriquecer las anotaciones lingüísticas mediante nuevas columnas específicas del proyecto, como **`COREC:NER`**, **`COREC:DISFL`** y **`COREC:FORM_ORIG`**, lo que amplía las posibilidades de análisis y explotación del corpus.
 
-El pipeline genera:
 
-- archivos CoNLL-U
-- archivos CoNLL-U Plus enriquecidos con:
-  - COREC:NER
-  - COREC:DISFL
-  - COREC:FORM_ORIG
+## Archivos del repositorio
 
-## Objetivo
+**pipeline_COREC.ipynb**  
+Cuaderno de **Jupyter Notebook** que contiene la implementación completa del pipeline: etiquetado automático POS Y NER, alineamiento determinista de tokens mediante clave triple y generación de salidas en formato CoNLL-U y CoNLL-U Plus.
 
-Garantizar trazabilidad completa entre:
+Durante la ejecución del cuaderno se generan distintos archivos intermedios.
 
-forma_original → forma_resultante → token CoNLL-U
 
-mediante un sistema de alineamiento estable basado en índices en memoria.
+## Librerías, herramientas y estándar de etiquetado empleados
 
-## Tecnologías
-
-- Python
-- Stanza
-- Universal Dependencies
-- CoNLL-U / CoNLL-U Plus
+- **Python**
+- **Stanza (Stanford NLP)**
+- **Universal Dependencies (UD)**
+- **Formato CoNLL-U y CoNLL-U Plus**
