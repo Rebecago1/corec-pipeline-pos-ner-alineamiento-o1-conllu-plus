@@ -4,7 +4,7 @@
 
 Este proyecto, desarrollado en el contexto del **Corpus Oral de Referencia del Español en Contacto (COREC) Fase II: lenguas minoritarias**, tiene por objetivo la implementación de un **algoritmo de alineamiento determinista** entre las formas originales presentes en las transcripciones ortográficas del corpus y los tokens generados por el etiquetado automático mediante la librería de PLN Stanza.
 
-El sistema se basa en una **clave triple estable** (`id_archivo`, `id_ud`, `id_conllu`), que permite recuperar en **tiempo constante (O(1))** los tokens correspondientes, así como mantener la **trazabilidad entre las distintas representaciones del texto**.
+El sistema se basa en una **clave triple estable** (`id_archivo`, `id_ud`, `id_conllu`), que recupera en **tiempo constante (O(1))** los tokens correspondientes, así como mantener la **trazabilidad entre las representaciones originales y normalizadas del texto.**.
 
 Asimismo, el flujo de trabajo incluye **etiquetado morfosintáctico (POS) en el marco de Universal Dependencies (UD)**, **reconocimiento de entidades nombradas (NER)** y **generación de salidas estructuradas en formato CoNLL-U y CoNLL-U Plus**.
 
