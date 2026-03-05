@@ -15,6 +15,7 @@ La extensión del formato **CoNLL-U a CoNLL-U Plus** enriquece las anotaciones l
 **09_COREC_etiquetado_Stanza_alineamiento_CoNLL-U Plus.ipynb**  
 
 Cuaderno de Jupyter que contiene la implementación del *pipeline*.
+
 Durante su ejecución se generan varios archivos y salidas:
 
 - **Log_4_9_11_merged_con_id_conllu_final.csv**: registro que incluye el resultado del **alineamiento entre las formas resultantes y los identificadores de token (`id_conllu`)**.
@@ -29,3 +30,5 @@ Durante su ejecución se generan varios archivos y salidas:
 - **Stanza (Stanford NLP)**
 - **Universal Dependencies (UD)**
 - **Formato CoNLL-U y CoNLL-U Plus**
+
+Nota: El cuaderno parte de transcripciones orales ortográficas del corpus COREC previamente normalizadas y de un registro de las normalizaciones realizadas.
